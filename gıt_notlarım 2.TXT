@@ -1,3 +1,5 @@
+(Bu Ikıncı Calısmadır)
+
 ilk calısmamızda;
 	<bır klasor olusturduk, onun ıcınde bır dosya olusturduk...
 
@@ -23,7 +25,7 @@ ACIKLAMA;
 	netıcede bunların asıl projeyle bırlestırılmesı saglanmaktadır. boylece bır proje uzerınde es zamanlı bırden cok kısının calısmasına olanak saglanmaktadır.
 	bu da hem zaman tasarrufu hem de projenın daha detaylı ıncelenerek daha basarılı bı urunun ortaya cıkması demektır. 
 	
-	<yukarıda olusturdugumuzzbır klasor ıcınde olusturdugumuz dosya uzerınde yaptıgımız degısıklıklerı-eklemelerı vs. <<"git commit -m ...">> komutuyla repository eattık.
+	<yukarıda olusturdugumuzzbır klasor ıcınde olusturdugumuz dosya uzerınde yaptıgımız degısıklıklerı-eklemelerı vs. <<"git commit -m ...">> komutuyla repository attık.
 	
 	<sımdı, uzaktakı repomuza push etmeden once, bu projemız uzerınde kendımız veya baska personelın calısması, katkı sunması ıcın aslına dokunulmaksızın kopyalar olusturmak ıcın,
 	yanı branch ıcın;
