@@ -36,5 +36,5 @@ pekı bı dosyayı staging area(ındex)-hazırlama alanına attık-gonderdık am
 	<"git rm --cached" veya "git restore --staged" komutlarından bırısıyle yapabılıyorum.
 	<bunu yaptıktan sonra gıt status ıle yıne yesıle donmus olan dosyalarımızın tekrar kırmızıya dondugunu goreceksınız.
 
-										...BIR SONRAKI DERSTE BULUSMAK UMIDIYLE...
+										           ...BIR SONRAKI DERSTE BULUSMAK UMIDIYLE...
 
