@@ -1,0 +1,87 @@
+GİT LOCAL REPOSİTORY ÇALIŞMA 
+
+1- Önce GitBash veya VScode'yi açıyoruz.
+2- Klasör açıyoruz: mkdir (foldername) ve (cd foldername) ile içine giriyoruz.
+3- içine local repo oluşturuyoruz: git init
+4- içine (touch) komutu ile dosyalar oluşturuyoruz. (klasörlerde olabilir)
+5- onların durumlarını kontrol ediyoruz: git status  (yaptığımmız değişiklikler kırmızı renkli olacak)
+6- bu değişiklikleri staged Area'ya gönderiyoruz. değişik yolları var.
+    a ) git add <dosya adı yazarak>, 
+    b ) git add <.> nokta koyarak,
+    c ) git add -A (yapılan bütün değişiklikleri gönderir)
+    
+7- git status ile tekrar kontrol edebiliriz. 
+   burada yapılan değişiklik yeşil renkli ve commit etmeye hazır demesi lazım.
+   ( git commit -m "mesaj yazıyoruz." )  . kısayol var. 
+   ( git commit -am "mesaj" )  = dersek git add yapmaya gerek kalmıyor bilginize.
+   git commit   yazarsak bizi vim editörüne götürür. ve mesajı oradan yazmamızı isteer.
+8- bir dosya veya klasörün adını değiştirebiliriz. 
+    ===> mv <dosya & klasör adı> <yeni adı yazıyoruz>
+9- commit yaptığımız bir dosya/klasör  ===> git restore --staged <dosya/klasör adı>
+10- staged area'dan çıkarmak için git rm -cached <dosya/klasör adı>
+11- git log veya git log --oneline   ==> bütün komit yaptıklarımızı listeler
+12- git checkout <log no(ilk 5 rakam)> istediğimiz yere tekrar gideriz.
+13-  git revert <log no> ilgili değişikliği eski haline getirir.
+14-  git reset <log no> tüm değişiklikleri alır.
+
+15- git branch <branch adı> yeni bir dal açarız.
+16- ilgili branch'a gitmek için ==> git checkout <branch name> 
+    kısayol ==> git checkout -b <branch name> direkt açtığımız branch'ın içine gireriz.
+17- burada yaptığımız değişiklikleri yine ( git add ve git commit) 
+    yukarıda dediğimiz (5 - 6 - 7. maddeler) gibi yapacağız.
+18- burada yaptığımız değişiklikleri almak için 
+    ==> git checkout master/main (ana dizine tekrar geliyoruz.)
+19- git merge <branch name>    komutu ile yapılan değişiklikleri ana dizine alıyoruz.
+
+
+		GİTHUB --UZAK REPOSİTORY ÇALIŞMA --
+
+1- GİTHUB'a gidiyoruz. Yeni bir repository açıyoruz.(içine README.md seçmeyelim)
+2- gitBash'a gidiyoruz. github'daki dosya ile aynı ad ile klasör açıyoruz.(mkdir <klasör name>
+   touch'la README.md adında bir dosya oluşturuyoruz. ve yine (add ve commit) yapıyoruz. 
+3- git remote add origin (uzak depo URL'sini yazıyoruz)
+4- git push -u origin master/main   ==> yazarak bilgileri yerel repo dan github'a attık.
+
+
+   ------ CLONE yapmak ---->>>>>>>
+1- github da bir repository açıyoruz.
+2- URL'sini kopyalıyruz ve gitbash'e gidiyoruz.
+3- git clone (URL + token) yazıyoruz. github daki klasörü locale aldık.
+4- aldığımız klasörün içine localde (gitbash'te) içine girip yeni
+   bir dosya açıyoruz ve vim ' le bir şeyler ekliyoruz.
+   yine (add ve commit) yapıyoruz.
+5- git remote -v   komutu ile (fetch ve push) yapacağımız yerleri görüyoruz.
+6- git push diyerek localdeki değişiklikleri github'a attık.
+7- hem localde hem de github 'ta değişiklik yaparsak. 
+   ve localden (push) yaparsak göndermez ve (conflict) diye bir şey çıkar.
+   bunun anlamı: github da bir değişiklik yaptık önce onu alman gerekiyor diyor bize...
+8- git fetch   ve  git merge komutlarını  kullanırız. 
+   bunları yaptığımızda otomatik vim operatörünü açar.
+   burada düzenlenmesi gereken yerleri düzenliyoruz ve tekrar (add ve commit) yapıyoruz.
+   daha sonra tekrar   git push   dediğimizde dosya gidiyor.
+
+
+   ------ LOCALDE BİR BRANCH AÇIP ONU GİTHUB'A GÖNDERMEK İÇİN  ----
+
+1- Local repoda iken bir branc açıyoruz. ve yine bir takmı değişiklikler yapıyoruz
+   sonra yine (add ve commit) yaptıktan sonra bu branch'ta iken
+  ===>> git push origin <branch name>   diyerek bilgileri github'a atıyoruz.
+2- github' gidiyoruz ve yenile dedikten 
+   sonra ---pull/request--- yapmamız gerekiyor. ve sonra merge yapıyoruz.
+3- daha sonra tekrar locale geliyoruz. ve tekrar
+   main/master branch'a geliyoruz (git checkout <main/master>.
+   git pull ===>> komutu ile repolarımızı eşitliyoruz.
+4- bir branch silmek için ==> git branch <branch name>
+
+-----FORKLAMA -----
+1- Github'a gidiyoruz ve forklama yapacağımız adresi aramadan buluyoruz.
+   ve sol üst tarafta bulunan fork'un üzerine tıklıyoruz. github'ımıza klasör/repo geldikten sonra 
+2- local repomuzu açıyoruz ve clonlama yapıyoruz.
+3- gerekli değişiklikleri yaptıktan sonra git push   yapıyoruz.
+4- tekrar github ' ı açıyoruz kendi sayfamızdan pull/request  yapıp merge ediyoruz ilgili kişiye
+   daha gerisi, o kişinin dosyamızı kabul ve red etmesine kalmış.
+
+
+-----DAHA AYRINTILI BİLGİ İÇİN DAN BROWN HOCAMIN (GİT NOTLARINA BAKABİLİRSİNİZ.----
+------  KOLAYLIKLAR DİLİYORUM HERKESE   ----
+
