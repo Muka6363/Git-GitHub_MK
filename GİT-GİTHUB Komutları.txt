@@ -85,3 +85,21 @@ GİT LOCAL REPOSİTORY ÇALIŞMA
 -----DAHA AYRINTILI BİLGİ İÇİN DAN BROWN HOCAMIN (GİT NOTLARINA BAKABİLİRSİNİZ.----
 ------  KOLAYLIKLAR DİLİYORUM HERKESE   ----
 
+
+
+You got a ‘master (non-fast-forward)’ error with a ‘failed to push some refs to’ error
+A git fast-forward happens when the ref pointer gets moved forward in the commit history.
+However, if your code diverges before it reaches the latest commit, it can cause the non-fast-forward issue and lead to a failed to push some refs to error. To solve this issue, you can pull with the --rebase flag. --rebase will let you move your intended files to commit over to the latest pull code. Here is how to pull with --rebase:
+
+git pull --rebase origin [branch]
+
+...ASAGIDAKI HATAYI ALMANIZ HALINDE YUKARIDAKI KOMUTU KOSTURUNUZ...
+GitHub.git
+ ! [rejected]        main -> main (no$ git push
+ To https://github.com/Muka6363/Gin-fast-forward)
+ error: failed to push some refs to 'https://github.com/Muka6363/Git-GitHub.git'
+    sonra ---pull/request--- yapmamız gerekiyor. ve sonra merge yapıyoruz.
+    hint: Updates were rejected because the tip of your current branch is behind
+    hint: its remote counterpart. Integrate the remote changes (e.g.
+    hint: 'git pull ...') before pushing again.
+    hint: See the 'Note about fast-forwards' in 'git push --help' for details. 
